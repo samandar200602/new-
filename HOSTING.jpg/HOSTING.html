@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium veb-hosting: 99.9% ish vaqti, zaxira va 24/7 texnik yordam. Tez va ishonchli hosting paketlari.">
+    <title>Premium Hosting</title>
+    <link rel="stylesheet" href="hosting.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <a class="skip-link" href="#main">Skip to content</a>
+                <div class="logo">Hosting<span>Company</span></div>
+                <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">ASOSIY</a></li>
+                    <li><a href="#services">XIZMATLAR</a></li>
+                    <li><a href="#pricing">NARXLASH</a></li>
+                    <li><a href="#contact">KONTAKT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main">
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Premium Hosting Xizmatlari</h1>
+            <p>Ishonchli va tezkor veb-hosting xizmatlari. Veb-saytingiz uchun 99.9% ish vaqti, kundalik zaxira va 24/7 texnik yordam.</p>
+            <div class="divider"></div>
+            <button class="cta-button">VEB HOSTING OLING</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>XIZMATLARIMIZ</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>UMUMIY HOSTING</h3>
+                    <p>Kichik veb-saytlar va bloglar uchun arzon va ishonchli paketlar.</p>
+                </div>
+                <div class="service-card">
+                    <h3>BIZNES HOSTING</h3>
+                    <p>O'sib borayotgan bizneslar uchun ishonchli va tezkor hosting.</p>
+                </div>
+                <div class="service-card">
+                    <h3>MAXSUS SERVERLAR</h3>
+                    <p>To'liq nazorat va maksimal ishlash uchun ajratilgan serverlar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Hosting COMPANIYASI. BARCHA HUQUQLAR HIMOYALANGAN.</p>
+            <p>SAMANDAR | 26/11/2025</p>
+        </div>
+    </footer>
+    </main>
+
+    <script>
+        // Mobile navigation toggle
+        (function () {
+            const btn = document.querySelector('.nav-toggle');
+            const nav = document.getElementById('nav-links');
+            btn && btn.addEventListener('click', function () {
+                const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+                this.setAttribute('aria-expanded', !expanded);
+                document.body.classList.toggle('nav-open');
+            });
+            // Close mobile menu on link click
+            nav && nav.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A' && document.body.classList.contains('nav-open')) {
+                    document.body.classList.remove('nav-open');
+                    document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
